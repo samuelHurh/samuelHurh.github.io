@@ -1,0 +1,84 @@
+/* https://htmlcolorcodes.com/ */
+
+.alltextelements {
+
+}
+
+canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  position: relative;
+  width: 100%
+}
+
+.button {
+  background-color: #F7E63D;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.button2 {background-color: #12FE23;}
+.button3 {background-color: #F6372A;}
+
+.center {
+  text-align: center;
+}
+
+
+
+.container{
+  width: 1000px;
+  height: 1000px;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+.contents {
+  border-radius: 25px;
+  width: 100%;
+  background: rgba(0, 255, 255, 0.5);
+  font-family: "Lucida Console", "Courier New", monospace;
+  color:white;
+  text-align:center;
+  font-weight: bold;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  line-height: 1.8;
+}
+.blurb {
+  padding-left: 70px;
+  padding-right: 70px;
+  text-align: left;
+  font-weight: normal;
+  font-size: 14pt;
+}
+
+.stack-top {
+  text-align: center;
+  z-index: 10;
+  color:white;
+  opacity: 1;
+  font-size: 16pt;
+}
+
+
+.technologyLogos {
+  position: relative;
+  align-items: center;
+  margin: auto;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.button {
+  
+}
