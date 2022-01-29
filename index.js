@@ -9,7 +9,7 @@ import './WebGL.js'
 //https://www.solarsystemscope.com/textures/
 
 //use "npm run deploy" to push changes to webpage
-import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js'
+import * as THREE from 'https://cdn.skypack.dev/three@0.136.0'
 
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 //import { PointerLockControls } from 'three/examples/jsm/controls/PointerLockControls.js';
