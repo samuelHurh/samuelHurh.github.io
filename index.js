@@ -9,9 +9,9 @@ import './WebGL.js'
 //https://www.solarsystemscope.com/textures/
 
 //use "npm run deploy" to push changes to webpage
-import * as THREE from 'https://cdn.skypack.dev/three@0.136.0'
+import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js'
 
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+import {OrbitControls} from 'https://cdn.skypack.dev/three@0.127.0/examples/jsm/controls/OrbitControls.js';
 //import { PointerLockControls } from 'three/examples/jsm/controls/PointerLockControls.js';
 
 
@@ -20,7 +20,7 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 const renderer = new THREE.WebGLRenderer({
-  canvas: document.querySelector('#bg'),
+  canvas: document.querySelector('.webgl'),
 });
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
