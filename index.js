@@ -7,6 +7,8 @@ import './WebGL.js'
 // images from:
 //http://planetpixelemporium.com/earth8081.html
 //https://www.solarsystemscope.com/textures/
+
+//use "npm run deploy" to push changes to webpage
 import * as THREE from 'three'
 
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
