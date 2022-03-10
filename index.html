@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,9 +8,15 @@
     <title>Samuel Hurh</title>
     <link href = "./style.css" type = "text/css" rel = "stylesheet"/>
   </head>
+  <style>
+    body {
+      background-image: linear-gradient(to right, #191970, #F34200);
+    }
+    
+  </style>
   <body>
-    <!-- type = "module" id = "bg" -->
-    <canvas class = "webgl"></canvas>
+    <!-- will fix three.js stuff later but for now adding a blank background -->
+    <canvas type = "module" id = "bg" class = "webgl"></canvas>
     <div id="app"></div>
     <script type = "module" src="./index.js"></script>
     <main width = '100%'>
