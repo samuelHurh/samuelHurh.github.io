@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,146 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samuel Hurh</title>
     <link href = "./style.css" type = "text/css" rel = "stylesheet"/>
-  </head>
-  <body>
-
-    <canvas type = "module" id = "bg" class = "webgl"></canvas>
-    <div id="app"></div>
     <script type = "module" src="./index.js"></script>
-    <main width = '100%'>
-      <!-- <h1 style = color:white id = "log" position =  "fixed">boilerplate</h1> -->
-      <!-- <div class = textbounds>
-        <p style = color:white opacity = 1>Hello</p>
-      </div> -->
+  </head>
+  <style>
+    body {
+      background-image: linear-gradient(to right, #191970, #F34200);
+      margin: 0px;
+    }
+    
+  </style>
+  <body>
+    <!-- will fix three.js stuff later but for now adding a blank background -->
+    <!-- <canvas type = "module" id = "bg" class = "webgl"></canvas> -->
+    <!-- <div id="app"></div> -->
 
+    <div class = "header" id = "myHeader">
+      <h1 style = "margin-left: 20px">Samuel Hurh</h1>
+      <div class = "header_segmentation">
+        <div class = "header_box">
+          <button class="link" id = "home" style = "color:rgba(0,255,0,1)">Home</button>
+        </div>
+        <div class = "header_box">
+          <button class="link" id = "about_me">About Me</button>
+        </div>
+        <div class = "header_box">
+          <button class="link" id = "portfolio">Portfolio</button>
+        </div>
+        <div class = "header_box">
+          <button class="link" id = "contact_me">Contact me</button>
+        </div>
+        <div class = "3d">
+          <button class="link" id = "3d">3d</button>
+        </div>
+      </div>
+      
+    </div>
+    <main width = '100%'>
       <div class= "container">
         <div class="contents">
-          <h1>Samuel Hurh</h1>
-          <h2>Software Developer/Engineering Student</h2>
-          <br>
-          <br>
-          <div class = "blurb">
-            <div class = "sidebyside">
-              <p>Greetings, my name is Samuel Hurh and I am a sophomore studying Systems
-                Engineering and Design with a minor in Computer Science at the University of Illinois
-                at Urbana-Champaign. I have a strong interest in pursuing a software engineering/development career
-                post-graduation.
-              </p>
-            </div>
-            <br>
-            <br>
-            <p>Systems Engineering and Design is not a common major that engineering students pursue, so allow me to 
-              explain what it is. Systems Engineering and Design is a broad engineering major that combines multiple 
-              different types of engineering concentrations (i.e. Electrical, Mechanical, and Computer Science) with 
-              the purpose of understanding and managing entire engineering systems. These systems include software systems 
-              and transportation systems to name a few.</p>
-            <br>
-            <br>
-            <p>While the Systems Engineering and Design major is general in nature, the Grainger College of Engineering 
-              allows its SED students to pursue a specific concentration, of which I’ve chosen to specialize in computer science. 
-              Coursework that I have taken relative to computer science include an introductory Java course for CS majors, an introductory
-            course to C++ for CS majors, discrete mathematics, and data structures and algorithms.</p>
-            <br>
-            <br>
-            <p>Outside of my coursework, I also enjoy contributing to software development projects under registered student organizations at UIUC. 
-              During my most recent semester, I’ve worked with a team of six to develop a web platform for the Office of the Vice Chancellor for Diversity, 
-              Equity, and Inclusion which will foster collaboration between researchers of a wide range of specialties. The web platform was built primarily 
-              through react.js node.js which were new technologies to me at the time. Despite a rather rapid training period, my project group and I were successfully 
-              able to deliver our phases of the project work, thereby satisfying the client.
-            </p>
+          <h1 style = "margin-bottom:0px;">Samuel Hurh</h1>
+          <h2 style = "margin-top:0px;">Computer Science Student/Rising Software Engineer</h2>
+          <div class = "featured_window">
+            <h1>Featured Work</h1>
+            <h2>AR Gaze-depth Interaction Research</h2>
+            <iframe width="80%" height="600px"
+              src = "https://www.youtube.com/embed/kKao8lfM_RY" style = "margin-bottom: 40px">
+            </iframe>
           </div>
-
-          <br>
-          <br>
-          <br>
-          <br>
           <h1>Resume</h1>
           <iframe src= "./resume.pdf" width = "85%" height = "800px"></iframe>
           <br>
           <br>
-          <br>
-          <br>
-          <h1>Technologies I have worked with</h1>
-          <div class = "technologyLogos">
-            <img src = "./Logos/c++.jpg" width = "50px" height = "50px" padding-right = "2px" padding-left = "2px" border-radius = "200px">
-            <img src = "./Logos/java.jpg" width = "50px" height = "50px">
-            <img src = "./Logos/python.jpg" width = "50px" height = "50px">
-            <img src = "./Logos/html.jpg" width = "50px" height = "50px">
-            <img src = "./Logos/css.jpg" width = "50px" height = "50px">
-            <img src = "./Logos/js.jpg" width = "50px" height = "50px">
-            <img src = "./Logos/react.jpg" width = "50px" height = "50px">
-            <img src = "./Logos/node.jpg" width = "50px" height = "50px">
-            <img src = "./Logos/webgl.jpg" width = "50px" height = "50px">
-            <img src = "./Logos/threejs.png" width = "50px" height = "50px">
-            <img src = "./Logos/dart.jpg" width = "50px" height = "50px">
-            <img src = "./Logos/flutter.jpg" width = "50px" height = "50px">
-            <img src = "./Logos/vscode.jpg" width = "50px" height = "50px">
-            <img src = "./Logos/fusion.png" width = "50px" height = "50px">
           </div>
         </div>
       </div>
-
-
-      <!-- <div style = color:white>
-        <p>fillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfiller</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-        <p>filler</p>
-      </div> -->
 
     </main>
 

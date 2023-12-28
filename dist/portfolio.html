@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samuel Hurh</title>
+    <link href = "./style.css" type = "text/css" rel = "stylesheet"/>
+    <script type = "module" src="./index.js"></script>
+  </head>
+  <style>
+    body {
+      background-image: linear-gradient(to right, #191970, #F34200);
+      margin: 0px;
+    }
+    
+  </style>
+  <body>
+    <!-- will fix three.js stuff later but for now adding a blank background -->
+    <!-- <canvas type = "module" id = "bg" class = "webgl"></canvas> -->
+    <!-- <div id="app"></div> -->
+
+    <div class = "header" id = "myHeader">
+      <h1 style = "margin-left: 20px">Samuel Hurh</h1>
+      <div class = "header_segmentation">
+        <div class = "header_box">
+          <button class="link" id = "home">Home</button>
+        </div>
+        <div class = "header_box">
+          <button class="link" id = "about_me">About Me</button>
+        </div>
+        <div class = "header_box">
+          <button class="link" id = "portfolio" style = "color:rgba(0,255,0,1)">Portfolio</button>
+        </div>
+        <div class = "header_box">
+          <button class="link" id = "contact_me">Contact me</button>
+        </div>
+      </div>
+      
+    </div>
+
+    <main width = '100%'>
+      <div class= "container">
+        <div class="contents">
+          <h1>Portfolio</h1>
+<!-- 
+          Here I should define a template for portfolio objects to be listed in consisting of:
+          - An image representing a project
+          - A caption for the project
+          - A link to the project
+          - A link to the source code (if available) -->
+          <div class = "portfolio_item">
+            <h2 style="margin-bottom: 0px">AR Gaze-Depth Research</h2>
+            <img src = "./gaze-hci_gif_lrg.gif" style = "margin-top: 0px; margin-bottom: 0px; width:80%;height:60%;">
+            <h2 style = "margin-top: 0px; margin-bottom: 0px; margin-left: 10%; margin-right:10%">Research project studying gaze-depth as a method of AR human-computer interface</h2>
+            <a style = "margin-top: 0px; margin-bottom:0px" href = "https://www.youtube.com/watch?v=kKao8lfM_RY">Link to video</a>
+            <h3 style = "margin-top: 0px; margin-bottom: 0px">Source code is private to the UIUC CS department</h3>
+          </div>
+          <br>
+          <br>
+          <div class = "portfolio_item">
+            <h2 style="margin-bottom: 0px">Unity VR Game Development</h2>
+            <img src = "./target_clip_lrg.gif" style = "margin-top: 0px; margin-bottom: 0px; width: 80%; height: 60%;">
+            <h2 style = "margin-top: 0px; margin-bottom: 0px; margin-left: 10%; margin-right:10%">Solo vr game development using the unity engine featuring XR interaction and procedural generation</h2>
+            <a style = "margin-top: 0px; margin-bottom:0px" href = "https://www.youtube.com/@OverCaffeinated-fu1sn/featured">Link to devlog channel</a>
+            <br>
+            <a style = "margin-top: 0px; margin-bottom: 0px" href = "https://github.com/OverCaffeinated09/steelTargetChallenge">Publicly available source code</a>
+          </div>
+          <br>
+          <br>
+          <div class = "portfolio_item">
+            <h2 style="margin-bottom: 0px">Computer Graphics Projects</h2>
+            <h3>An array of computer graphics projects I have created</h3>
+            <div class = "portfolio_sidebyside">
+              <h3>Link</h3>
+              <h3>Instructions</h3>
+            </div>
+            <div class = "portfolio_sidebyside">
+              <a href = "./webgl/logo/logo.html" style = "margin:auto">Dancing 2d logo</a>
+              <h5 style = "justify-self: center">No input necessary</h5>
+            </div>
+            <div class = "portfolio_sidebyside">
+              <a href = "./webgl/Orbits/solarSystem.html" style = "margin:auto">Solar System</a>
+              <h5 style = "justify-self: center">No input necessary</h5>
+            </div>
+            <div class = "portfolio_sidebyside">
+              <a href = "./webgl/terrain/terrainGeneration.html" style = "margin:auto">Terrain Generation</a>
+              <h5 style = "justify-self: center">"Grid size" scales vertex count, "Faults" scales terrain complexity. Click "Regenerate Terrain" to generate random terrain</h5>
+            </div>
+            <div class = "portfolio_sidebyside">
+              <a href = "./webgl/texture/terrainTexture.html" style = "margin:auto">Texture and color mapping</a>
+              <h5 style = "justify-self: center">Similar to Terrain Generation except that the Material input can take preloaded png images and hex colors (with alpha scaling specular-diffuse lighting ratio)</h5>
+            </div>
+            <div class = "portfolio_sidebyside">
+              <a href = "./webgl/flight/fly.html" style = "margin:auto">Fly around terrain</a>
+              <h5 style = "justify-self: center">WASD to move, arrow keys to look around</h5>
+            </div>
+            <div class = "portfolio_sidebyside">
+              <a href = "./webgl/drive/walk.html" style = "margin:auto">Walk along terrain</a>
+              <h5 style = "justify-self: center">WASD to move, arrow keys to look around you are bound to the ground</h5>
+            </div>
+            <div class = "portfolio_sidebyside">
+              <a href = "https://github.com/samuelHurh/python_rasterizer" style = "margin:auto">python_rasterizer</a>
+              <h5 style = "justify-self: center">A link to the github repo</h5>
+            </div>
+            <div class = "portfolio_sidebyside">
+              <a href = "https://github.com/samuelHurh/python_raytracer" style = "margin:auto">python_raytracer</a>
+              <h5 style = "justify-self: center">A link to the github repo</h5>
+            </div>
+            <br>
+
+            
+            
+          </div>
+
+         
+
+    </main>
+
+
+  </body>
+</html>
