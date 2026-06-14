@@ -1,0 +1,10 @@
+"triangles"
+A collection of sets of points that represent the index of the point position and color in "attributes" that describe each triangle.
+
+Attributes:
+A collection of sets of points in 2d
+A collection of sets of color descriptors (RGBa) corresponding to points in the past array
+
+
+First 6 triangles fill the blue I in the background (each rectangle is 2 triangles)
+Last 6 triangles fill the orange I in the foreground

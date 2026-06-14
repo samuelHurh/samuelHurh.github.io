@@ -1,0 +1,43 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { projects } from "../data/projects";
+
+const categories = [...new Set(projects.map((project) => project.category))];
+const featuredProjects = projects.filter((project) => project.featured);
+const secondaryProjects = projects.filter((project) => !project.featured);
+const secondaryCategories = categories.filter((category) =>
+  secondaryProjects.some((project) => project.category === category)
+);
+---
+
+<BaseLayout title="Projects" description="XR, perception, real-time 3D, and systems projects by Samuel Hurh.">
+  <section class="section">
+    <p class="eyebrow">Projects</p>
+    <h1>Public XR, graphics, and interactive systems work.</h1>
+    <p class="lede">
+      Public projects in gaze interaction, networked VR, procedural VR systems,
+      rendering experiments, WebGL graphics, and supporting technical work.
+    </p>
+  </section>
+
+  <section class="section compact">
+    <p class="eyebrow">Featured projects</p>
+    <div class="featured-grid">
+      {featuredProjects.map((project) => <ProjectCard project={project} featured />)}
+    </div>
+  </section>
+
+  {
+    secondaryCategories.map((category) => (
+      <section class="section compact">
+        <p class="eyebrow">{category}</p>
+        <div class="grid two secondary-project-grid">
+          {secondaryProjects
+            .filter((project) => project.category === category)
+            .map((project) => <ProjectCard project={project} />)}
+        </div>
+      </section>
+    ))
+  }
+</BaseLayout>

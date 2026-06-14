@@ -1,0 +1,64 @@
+---
+import "../styles/global.css";
+import { navItems, site } from "../data/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = site.name, description = site.tagline } = Astro.props;
+const currentPath = Astro.url.pathname;
+const pageTitle = title === site.name ? site.name : `${title} | ${site.name}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#070A0F" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label={`${site.name} home`}>
+          <span>{site.name}</span>
+          <small>Software Engineer · AR/VR · Real-Time 3D</small>
+        </a>
+        <div class="nav-links">
+          {
+            navItems.map((item) => (
+              <a
+                href={item.href}
+                class:list={[
+                  item.label === "Resume" ? "resume-link" : "",
+                  currentPath === item.href ? "active" : "",
+                ]}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div>
+        <span>{site.name} — AR/VR, perception, and real-time 3D software.</span>
+      </div>
+      <div class="footer-links">
+        <a href={`mailto:${site.email}`}>Email</a>
+        <a href={site.links.linkedin}>LinkedIn</a>
+        <a href={site.links.github}>GitHub</a>
+      </div>
+    </footer>
+  </body>
+</html>

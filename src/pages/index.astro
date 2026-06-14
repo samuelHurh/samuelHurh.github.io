@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+
+const routes = [
+  {
+    title: "About",
+    href: "/about/",
+    summary: "Background, technical direction, and current XR/spatial computing focus.",
+  },
+  {
+    title: "Projects",
+    href: "/projects/",
+    summary: "Public work in gaze interaction, networked VR, procedural VR systems, and rendering experiments.",
+  },
+  {
+    title: "Work",
+    href: "/work/",
+    summary: "Professional and research contexts, kept separate from public project breakdowns.",
+  },
+];
+---
+
+<BaseLayout title="Home" description={site.tagline}>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">AR/VR · Real-Time 3D · Perception</p>
+      <h1>{site.name}</h1>
+      <p class="lede">{site.tagline}</p>
+      <p>
+        CS BS/MS graduate from UIUC with hands-on work across Unity/OpenXR,
+        Magic Leap 2, Meta Quest, sensing workflows, graphics, networking, and
+        spatial interaction prototypes.
+      </p>
+      <div class="cta-row">
+        <a class="button" href="/resume/">View resume</a>
+        <a class="button secondary" href="/projects/">See projects</a>
+        <a class="button secondary" href={`mailto:${site.email}`}>Contact</a>
+      </div>
+    </div>
+    <aside class="hero-panel spatial-visual" aria-label="Spatial computing visual motif">
+      <div class="point-cloud"></div>
+      <div class="visual-label">
+        <strong>Current focus</strong>
+        <span>AR/VR, real-time 3D, and perception-driven software.</span>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section compact">
+    <p class="eyebrow">Start here</p>
+    <div class="route-grid">
+      {
+        routes.map((route) => (
+          <a class="route-card" href={route.href}>
+            <span>{route.title}</span>
+            <p>{route.summary}</p>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

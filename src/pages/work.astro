@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { experiences } from "../data/experience";
+---
+
+<BaseLayout title="Work" description="Professional and research experience by Samuel Hurh.">
+  <section class="section">
+    <p class="eyebrow">Work</p>
+    <h1>Professional, research, and stakeholder-facing experience.</h1>
+    <p class="lede">
+      A concise view of professional and research contexts, separated from the
+      public project catalog.
+    </p>
+  </section>
+
+  <section class="section compact">
+    <div class="grid">
+      {
+        experiences.map((item) => (
+          <article class:list={["experience-card", item.media ? "" : "experience-card--text-only"]}>
+            {item.media?.src && (
+              <div class="media-slot">
+                <img src={item.media.src} alt={item.media.alt} loading="lazy" />
+              </div>
+            )}
+            <div>
+              <p class="meta">{item.type}</p>
+              <h2>{item.title}</h2>
+              <p><strong>{item.organization}</strong></p>
+              <p>{item.description}</p>
+              <dl class="evidence-grid">
+                <div>
+                  <dt>Role</dt>
+                  <dd>{item.role}</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>{item.outcome}</dd>
+                </div>
+              </dl>
+              <ul class="check-list">
+                {item.highlights.map((highlight) => <li>{highlight}</li>)}
+              </ul>
+              <div class="tag-row">
+                {item.technologies.map((technology) => <span>{technology}</span>)}
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+
+const contactLinks = [
+  { label: "Email", detail: site.email, href: `mailto:${site.email}` },
+  { label: "LinkedIn", detail: "linkedin.com/in/samuelhurh", href: site.links.linkedin },
+  { label: "GitHub", detail: "github.com/samuelHurh", href: site.links.github },
+  { label: "YouTube", detail: "project and devlog videos", href: site.links.youtube },
+];
+---
+
+<BaseLayout title="Contact" description="Contact Samuel Hurh.">
+  <section class="section">
+    <div class="split">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h1>Reach out about XR, spatial computing, perception, or real-time 3D roles.</h1>
+        <p class="lede">
+          Email and LinkedIn are the best ways to contact me for recruiting,
+          engineering, and project conversations.
+        </p>
+      </div>
+      <article class="contact-card">
+        <ul class="contact-list">
+          {
+            contactLinks.map((link) => (
+              <li>
+                <a href={link.href}>
+                  <strong>{link.label}</strong>
+                  <span>{link.detail}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

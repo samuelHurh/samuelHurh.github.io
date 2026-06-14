@@ -1,18 +1,16 @@
 {
-  "name": "myproject",
-  "version": "0.0.0",
+  "name": "samuel-hurh-portfolio",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "deploy": "astro build"
   },
   "devDependencies": {
-    "vite": "^2.9.16"
-  },
-  "dependencies": {
-    "gh-pages": "^3.2.3",
-    "node.js": "0.0.1-security",
-    "three": "^0.136.0"
+    "@astrojs/check": "^0.9.7",
+    "astro": "^5.13.5",
+    "typescript": "^5.9.3"
   }
 }
