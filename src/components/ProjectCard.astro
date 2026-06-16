@@ -9,22 +9,33 @@ interface Props {
 const { project, featured = false } = Astro.props;
 ---
 
-<article class:list={["project-card", featured ? "project-card--featured" : "project-card--compact"]}>
+<article class:list={["project-card", featured ? "project-card--featured" : "project-card--compact", project.media?.src ? "" : "project-card--no-media"]}>
   {
-    project.media?.src && (
-      <div class="media-slot">
-        <img
-          src={project.media.src}
-          alt={project.media.alt}
-          loading={featured ? "eager" : "lazy"}
-        />
+    project.media?.src ? (
+      <div class:list={["media-slot", project.media.type === "youtube" ? "media-slot--video" : ""]}>
+        {project.media.type === "youtube" ? (
+          <iframe
+            src={project.media.src}
+            title={project.media.title ?? project.media.alt}
+            loading={featured ? "eager" : "lazy"}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          />
+        ) : (
+          <img
+            src={project.media.src}
+            alt={project.media.alt}
+            loading={featured ? "eager" : "lazy"}
+          />
+        )}
       </div>
-    )
+    ) : null
   }
   <div class="project-card__meta">
     <span>{project.category}</span>
   </div>
   <h3>{project.title}</h3>
+  {project.context ? <p class="card-context">{project.context}</p> : null}
   <p>{project.summary}</p>
   <dl class="evidence-grid">
     <div>
@@ -43,12 +54,12 @@ const { project, featured = false } = Astro.props;
     {project.stack.map((item) => <span>{item}</span>)}
   </div>
   {
-    project.links && (
+    project.links?.length ? (
       <div class="link-row">
         {project.links.map((link) => (
           <a href={link.href}>{link.label}</a>
         ))}
       </div>
-    )
+    ) : null
   }
 </article>

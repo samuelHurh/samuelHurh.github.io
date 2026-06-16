@@ -5,66 +5,61 @@ import { site, skills } from "../data/site";
 
 <BaseLayout title="About" description="About Samuel Hurh, XR and spatial computing software engineer.">
   <section class="section">
-    <div class="split">
+    <div class="split about-hero">
       <div>
         <p class="eyebrow">About</p>
-        <h1>CS BS/MS graduate focused on XR, perception, and real-time interactive systems.</h1>
+        <h1>UIUC CS BS + MCS graduate focused on XR, wearable AI, and real-time interactive systems.</h1>
         <p class="lede">
-          I studied Computer Science at the University of Illinois
-          Urbana-Champaign and focus on spatial computing software: tracking,
-          sensing, interaction, rendering, and networking.
+          I'm a UIUC CS BS + MCS graduate focused on AR/VR, wearable AI, and
+          real-time 3D software. My work sits where software has to line up with
+          the physical world: cameras, depth sensing, pose alignment, spatial
+          interaction, rendering, and usable interfaces.
         </p>
         <p>
-          My work is strongest where physical-world data and real-time interfaces
-          meet: Unity/OpenXR prototypes, Magic Leap 2 and Meta Quest development,
-          spatial interaction research, networked VR, and graphics/rendering
-          experiments.
-        </p>
-        <p>
-          I am targeting XR, spatial computing, perception, simulation, and
-          real-time interactive software roles.
+          Recently, I've been building a Google Glass AI assistant prototype
+          while continuing work across Unity/OpenXR, Magic Leap 2, Meta Quest,
+          and computer-vision-driven AR workflows.
         </p>
         <div class="cta-row">
           <a class="button" href="/resume/">Resume</a>
           <a class="button secondary" href={site.links.linkedin}>LinkedIn</a>
         </div>
       </div>
-      <div>
+      <div class="portrait-card">
         <img class="portrait" src="/profile.jpg" alt="Samuel Hurh" loading="lazy" />
       </div>
     </div>
   </section>
 
   <section class="section compact">
-    <p class="eyebrow">Technical interests</p>
+    <p class="eyebrow">Technical Focus</p>
     <div class="grid three">
       <article class="info-card">
-        <h3>XR and spatial interfaces</h3>
+        <h3>Wearable AI & AR/VR Interfaces</h3>
         <p>
-          OpenXR, Unity, Magic Leap 2, Meta Quest, interaction systems, and
-          real-time interface behavior for AR/VR applications.
+          Google Glass EE2, Android/Kotlin, OpenXR, Unity, Magic Leap 2, Meta Quest,
+          hands-free interaction, and real-time interface behavior.
         </p>
       </article>
       <article class="info-card">
-        <h3>Perception and alignment</h3>
+        <h3>Perception & Spatial Alignment</h3>
         <p>
           Depth sensing, pose estimation, point clouds, marker alignment, ICP,
           calibration workflows, and visualization of sensed state.
         </p>
       </article>
       <article class="info-card">
-        <h3>Rendering and graphics</h3>
+        <h3>Rendering & Interactive 3D</h3>
         <p>
-          Shader-level rendering tradeoffs, WebGL, ray tracing, rasterization,
-          terrain generation, and performance-aware visual systems.
+          WebGL, shaders, ray tracing, rasterization, terrain generation, Unity
+          scenes, and performance-aware visual systems.
         </p>
       </article>
     </div>
   </section>
 
   <section class="section compact">
-    <p class="eyebrow">Skills</p>
-    <h2>Tools I can discuss concretely.</h2>
+    <p class="eyebrow">Tools & Systems</p>
     <div class="tag-row">
       {skills.map((skill) => <span>{skill}</span>)}
     </div>

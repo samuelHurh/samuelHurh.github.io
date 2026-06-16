@@ -1,43 +1,93 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { experiences } from "../data/experience";
+import { additionalExperience, workSections } from "../data/experience";
 ---
 
 <BaseLayout title="Work" description="Professional and research experience by Samuel Hurh.">
   <section class="section">
     <p class="eyebrow">Work</p>
-    <h1>Professional, research, and stakeholder-facing experience.</h1>
+    <h1>Professional XR work and AR/VR research.</h1>
     <p class="lede">
-      A concise view of professional and research contexts, separated from the
-      public project catalog.
+      Professional, research, and stakeholder-facing context for XR systems,
+      with industrial work kept high-level and separate from public project demos.
     </p>
   </section>
 
-  <section class="section compact">
+  {
+    workSections.map((section) => (
+      <section class="section compact work-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">{section.title}</p>
+            <h2>{section.description}</h2>
+          </div>
+        </div>
+        <div class="grid work-grid">
+          {section.items.map((item) => (
+            <article class:list={["experience-card", "work-card", item.media ? "" : "experience-card--text-only"]}>
+              {item.media?.length ? (
+                <div class="media-stack">
+                  {item.media.map((media) => (
+                    <div class:list={["media-slot", media.type === "video" ? "media-slot--video" : ""]}>
+                      {media.type === "video" ? (
+                        <iframe
+                          src={media.src}
+                          title={media.title ?? media.alt}
+                          loading="lazy"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen
+                        />
+                      ) : (
+                        <img src={media.src} alt={media.alt} loading="lazy" />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ) : null}
+              <div>
+                <p class="meta">{item.type}</p>
+                <h2>{item.title}</h2>
+                <p><strong>{item.organization}</strong></p>
+                <p>{item.description}</p>
+                <dl class="evidence-grid">
+                  <div>
+                    <dt>Role</dt>
+                    <dd>{item.role}</dd>
+                  </div>
+                  <div>
+                    <dt>Outcome</dt>
+                    <dd>{item.outcome}</dd>
+                  </div>
+                </dl>
+                <ul class="check-list">
+                  {item.highlights.map((highlight) => <li>{highlight}</li>)}
+                </ul>
+                <div class="tag-row">
+                  {item.technologies.map((technology) => <span>{technology}</span>)}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="section compact work-section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Additional Experience</p>
+      </div>
+    </div>
     <div class="grid">
       {
-        experiences.map((item) => (
-          <article class:list={["experience-card", item.media ? "" : "experience-card--text-only"]}>
-            {item.media?.src && (
-              <div class="media-slot">
-                <img src={item.media.src} alt={item.media.alt} loading="lazy" />
-              </div>
-            )}
+        additionalExperience.map((item) => (
+          <article class="experience-card experience-card--text-only work-card work-card--secondary">
             <div>
-              <p class="meta">{item.type}</p>
+              <p class="meta">{item.date}</p>
               <h2>{item.title}</h2>
               <p><strong>{item.organization}</strong></p>
               <p>{item.description}</p>
-              <dl class="evidence-grid">
-                <div>
-                  <dt>Role</dt>
-                  <dd>{item.role}</dd>
-                </div>
-                <div>
-                  <dt>Outcome</dt>
-                  <dd>{item.outcome}</dd>
-                </div>
-              </dl>
               <ul class="check-list">
                 {item.highlights.map((highlight) => <li>{highlight}</li>)}
               </ul>

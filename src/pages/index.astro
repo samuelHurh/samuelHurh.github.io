@@ -11,7 +11,7 @@ const routes = [
   {
     title: "Projects",
     href: "/projects/",
-    summary: "Public work in gaze interaction, networked VR, procedural VR systems, and rendering experiments.",
+    summary: "Public work in wearable AI, XR, computer vision, graphics, and interactive systems.",
   },
   {
     title: "Work",
@@ -24,25 +24,36 @@ const routes = [
 <BaseLayout title="Home" description={site.tagline}>
   <section class="hero">
     <div>
-      <p class="eyebrow">AR/VR · Real-Time 3D · Perception</p>
+      <p class="eyebrow">Software Engineer / AR/VR / Wearable AI / Real-Time 3D</p>
       <h1>{site.name}</h1>
       <p class="lede">{site.tagline}</p>
       <p>
-        CS BS/MS graduate from UIUC with hands-on work across Unity/OpenXR,
-        Magic Leap 2, Meta Quest, sensing workflows, graphics, networking, and
-        spatial interaction prototypes.
+        CS BS + MCS graduate from UIUC with hands-on work across Google Glass,
+        Unity/OpenXR, Magic Leap 2, Meta Quest, computer vision, and real-time
+        interactive prototypes.
       </p>
       <div class="cta-row">
-        <a class="button" href="/resume/">View resume</a>
-        <a class="button secondary" href="/projects/">See projects</a>
-        <a class="button secondary" href={`mailto:${site.email}`}>Contact</a>
+        <a class="button" href="/resume/">View Resume</a>
+        <a class="button secondary" href="/projects/">See Projects</a>
+        <a class="button secondary" href={`mailto:${site.email}`}>Email Me</a>
+      </div>
+      <div class="hero-links" aria-label="Primary profile links">
+        <a href={site.links.github}>GitHub</a>
+        <a href={site.links.linkedin}>LinkedIn</a>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
       </div>
     </div>
     <aside class="hero-panel spatial-visual" aria-label="Spatial computing visual motif">
-      <div class="point-cloud"></div>
+      <img
+        class="hero-visual-image"
+        src="/media/awe_splash.jpeg"
+        alt="Samuel Hurh at AWE with smart glasses demo equipment"
+        loading="eager"
+        onerror="this.style.display = 'none'"
+      />
       <div class="visual-label">
-        <strong>Current focus</strong>
-        <span>AR/VR, real-time 3D, and perception-driven software.</span>
+        <strong>Current work</strong>
+        <span>Smart-glasses AI, industrial AR/CV, and real-time spatial systems.</span>
       </div>
     </aside>
   </section>
