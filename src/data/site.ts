@@ -2,7 +2,7 @@ export const site = {
   name: "Samuel Hurh",
   title: "Software Engineer / AR/VR / Wearable AI / Real-Time 3D",
   tagline:
-    "I build AR/VR and wearable AI systems that connect real-time interaction, computer vision, and spatial software.",
+    "I build real-time interactive systems across AR/VR, wearable AI, computer vision, and spatial software.",
   email: "shurh1029@gmail.com",
   links: {
     linkedin: "https://www.linkedin.com/in/samuelhurh/",

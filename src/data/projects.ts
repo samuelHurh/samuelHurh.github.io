@@ -37,13 +37,14 @@ export const projectSections: ProjectSection[] = [
         title: "Google Glass AI Assistant",
         category: "Wearable AI",
         summary:
-          "Wearable AI assistant prototype for Google Glass Enterprise Edition 2 using Android/Kotlin, speech input, image capture, and a Cloud Run AI backend.",
+          "Wearable AI assistant prototype on Google Glass Enterprise Edition 2, pairing an Android/Kotlin device app with a Google Cloud backend for real-time AI interaction.",
         role: "Wearable AI prototype engineering",
-        outcome: "Hands-free field-assistance flow prepared for live demo use at AWE",
+        outcome: "A continuously iterating AI field assistant smart device harnessing the audio and visual sensors of the Google Glass EE2 to augment my capabilities and perception",
         details: [
           "Built an Android/Kotlin Glass app with voice capture and visual input flow.",
-          "Connected Cloud Run services using speech-to-text, Gemini / Vertex AI, and image-aware responses.",
-          "Designed around hands-free interaction, constrained wearable display output, and live demo constraints.",
+          "Connected Cloud Run services using speech-to-text, Gemini 2.5 flash / Vertex AI, and image-aware responses.",
+          "Designed around the constraints of Google Glass EE2’s touchpad and display by making voice the primary input path.",
+          "Funded by Google Cloud credits awarded from MIT Reality Hack 2026",
         ],
         stack: ["Google Glass", "Android", "Kotlin", "Cloud Run", "Gemini", "Vertex AI", "STT", "Wearable AI"],
         media: {
@@ -59,12 +60,15 @@ export const projectSections: ProjectSection[] = [
         category: "XR / Spatial Computing",
         summary:
           "An early VR interaction sandbox revisited years later as a fuller roguelike prototype, after building stronger Unity, XR, and systems experience through research and professional work.",
-        role: "Unity VR gameplay and interaction systems",
-        outcome: "Playable VR roguelike prototype with procedural layout, weapon systems, and enemy behavior",
+        role: "Unity VR gameplay and interaction systems development",
+        outcome: "Playable VR roguelike prototype with procedural levels, randomized weapons, and role-based enemy AI tuned for repeatable combat encounters.",
         details: [
-          "Expanded the original VR shooter sandbox into procedural dungeon, weapon, and enemy systems.",
-          "Built interaction-heavy systems around grabbing, weapons, recoil, targeting, and combat flow.",
-          "Used the project to turn years of XR prototyping into a more complete playable VR game loop.",
+          "Revisited a 2023 VR sandbox and expanded it into a playable roguelike prototype with a complete gameplay loop.",
+          "Addressed project timeline constraints by integrating and tuning VRIF around custom gameplay systems, replacing an older XRI-based interaction stack from the original Unity prototype.",
+          "Built a procedural dungeon generation system allowing players to traverse an entire level from start to finish.",
+          "Paired scaling room difficulty with scaling player capability. As the player progresses, enemies are tougher and more numerous, but more powerful weapons are made available.",
+          "Built lightweight and readable enemy AI systems for role-based combat behavior",
+          "Deployed the project for native runtime on the Meta Quest 3 platform made publicly available through itch.io",
         ],
         stack: ["Unity", "C#", "VR", "XR Interaction", "Roguelike", "Procedural Generation", "Enemy AI", "Weapon Systems"],
         media: {
@@ -87,18 +91,19 @@ export const projectSections: ProjectSection[] = [
     title: "Hackathon Work",
     projects: [
       {
-        title: "Sixth Sense - XR Hackathon Prototype",
+        title: "Sixth Sense - Immerse the Bay (2025)",
         category: "Hackathon / XR Interaction",
         summary:
-          "Hackathon XR prototype exploring wearable and haptic interaction for spatial interfaces.",
-        role: "Unity-side interaction prototyping",
+          "Hackathon XR prototype exploring wearable and haptic interaction for spatial interfaces. Built at Stanford's Immerse the Bay XR hackathon (2025)",
+        role: "Primary Unity Developer/Project Lead",
         outcome: "Award-recognized rapid XR prototype",
         details: [
           "Built Unity-side interaction logic for a rapid XR prototype.",
-          "Contributed to an award-recognized hackathon project.",
+          "Built a hand-tracking based VR game controller for integration with Afference's pseudohaptic wearables",
+          "Integrated and tuned XRI's XR hands package for custom gesture recognition.",
           "Explored alternative input and feedback channels for immersive interfaces.",
         ],
-        stack: ["Unity", "XR", "Haptics", "Interaction Design", "Hackathon"],
+        stack: ["Unity", "XR", "Haptics", "Interaction Design"],
         media: {
           type: "youtube",
           src: "https://www.youtube.com/embed/jUNuB5x1S_Y",
@@ -108,18 +113,18 @@ export const projectSections: ProjectSection[] = [
         links: [{ label: "Devpost", href: "https://devpost.com/software/we-love-harry-potter" }],
       },
       {
-        title: "2001: HAL's Dream - MIT Reality Hack",
+        title: "2001: HAL's Dream - MIT Reality Hack (2026)",
         category: "Hackathon / XR Narrative",
         summary:
-          "MIT Reality Hack project exploring immersive narrative interaction around helping HAL escape before Jupiter explodes.",
-        role: "Rapid XR prototyping and team implementation",
-        outcome: "Hackathon winner project",
+          "MIT Reality Hack project exploring immersive narrative interaction with Google Gemini integration for narrative gameplay systems",
+        role: "Unity VR developer",
+        outcome: "Award Recognized XR prototype for the Gemini Live API track",
         details: [
-          "Built as part of a rapid MIT Reality Hack team project.",
+          "Integrated Google Gemini's Live API with Unity to trigger gameplay events allowing player interaction through intent detection within the player's spoken responses.",
           "Used immersive interaction and narrative framing for an escape-room-style XR experience.",
           "Presented as a completed hackathon prototype on Devpost.",
         ],
-        stack: ["MIT Reality Hack", "XR", "Unity", "Hackathon", "Narrative Prototype"],
+        stack: ["MIT Reality Hack", "XR", "Unity", "Narrative Prototype"],
         media: {
           type: "image",
           src: "/media/MRH_titlecard.png",
@@ -133,15 +138,16 @@ export const projectSections: ProjectSection[] = [
     title: "Interactive Systems",
     projects: [
       {
-        title: "VR High-Frequency Trading Visualization",
+        title: "VR Financial Systems Visualization",
         category: "Interactive Systems",
         summary:
           "VR data visualization prototype for order book dynamics and packet-transfer behavior between exchanges.",
-        role: "Unity VR data visualization",
+        role: "Unity VR Data Visualization Developer",
         outcome: "Immersive view of historical/live order book data and exchange packet flow",
         details: [
-          "Visualized historical market order book data and live crypto order book feeds.",
-          "Represented packet transfer behavior using historical packet information.",
+          "Built data ingestion logic for live crypto order book streams and historical market data snapshots.",
+          "Visualized historical market order book data for top market performers and live crypto order book feeds through the Alpaca API.",
+          "Represented packet transfer behavior using historical packet information among major exchanges in the United States.",
           "Built an interactive VR scene for exploring financial market infrastructure concepts.",
         ],
         stack: ["Unity", "VR", "Data Visualization", "Market Data", "C#", "Interactive Systems"],

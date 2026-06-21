@@ -48,7 +48,7 @@ const { project, featured = false } = Astro.props;
     </div>
   </dl>
   <ul class="check-list">
-    {project.details.slice(0, featured ? 3 : 2).map((detail) => <li>{detail}</li>)}
+    {project.details.map((detail) => <li>{detail}</li>)}
   </ul>
   <div class="tag-row" aria-label={`Technologies used for ${project.title}`}>
     {project.stack.map((item) => <span>{item}</span>)}
